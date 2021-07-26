@@ -177,3 +177,10 @@ input[type='date'] {
 .delete-btn:focus {
   outline: 0;
 }
+
+
+
+.footer {
+  text-align: center;
+  font-size: 10px;
+}
