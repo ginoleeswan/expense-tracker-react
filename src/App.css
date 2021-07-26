@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,400;1,600&display=swap');
 
 :root {
   --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -16,7 +16,7 @@ body {
   justify-content: center;
   min-height: 100vh;
   margin: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .container {
@@ -28,6 +28,8 @@ h1 {
   letter-spacing: 1px;
   margin: 0;
 }
+
+
 
 h3 {
   border-bottom: 1px solid #bbb;
@@ -71,7 +73,6 @@ h4 {
 .money.minus {
   color: #c0392b;
 }
-
 
 
 .list {
@@ -129,6 +130,10 @@ h4 {
 
 
 
+.form-title {
+  text-align: right;
+}
+
 
 
 label {
@@ -143,6 +148,7 @@ input[type='date'] {
   border-radius: 2px;
   display: block;
   font-size: 16px;
+  font-family: sans-serif;
   padding: 10px;
   width: 100%;
 }
@@ -158,7 +164,10 @@ input[type='date'] {
   margin: 10px 0 30px;
   padding: 10px;
   width: 100%;
+  font-family: sans-serif;
+
 }
+
 
 .btn:focus,
 .delete-btn:focus {

@@ -31,7 +31,7 @@ export default function AddTransaction() {
     return (
         <div>
 
-            <h3>Add new transaction</h3>
+            <h3 className="form-title">Add new transaction</h3>
 
             <form onSubmit={onSubmit}>
 
