@@ -50,7 +50,8 @@ export default function AddTransaction() {
                         value={amount} 
                         onChange={(e) => setAmount(e.target.value)} 
                         placeholder="Enter amount..." 
-                        inputMode="decimal" />
+                        // inputMode="decimal" 
+                    />
                 </div>
 
                 <div className="form-control">
@@ -64,7 +65,8 @@ export default function AddTransaction() {
                         onChange={(e) => setDate(e.target.value)} 
                         // onFocus={(e) => (e.currentTarget.type = "date")}
                         // onBlur={(e) => (e.currentTarget.type = "text")} 
-                        placeholder="Enter date..." />
+                        placeholder="Enter date..." 
+                    />
                 </div>
 
                 <button className="btn">Add transaction</button>
