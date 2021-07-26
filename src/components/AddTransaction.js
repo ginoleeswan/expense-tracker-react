@@ -58,7 +58,7 @@ export default function AddTransaction() {
                         value={date} 
                         onChange={(e) => setDate(e.target.value)} 
                         onFocus={(e) => (e.currentTarget.type = "date")}
-                        onBlur={(e) => {e.currentTarget.type = "text"; e.currentTarget.focus();}} 
+                        onBlur={(e) => (e.currentTarget.type = "text")} 
                         placeholder="Enter date..." />
                 </div>
 
