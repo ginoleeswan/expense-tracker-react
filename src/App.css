@@ -120,13 +120,25 @@ h4 {
 }
 
 
+.transaction-date {
+  font-style: italic;
+  font-size: 10px;
+  display: inline-flex;
+  align-items: center;
+}
+
+
+
+
+
 label {
   display: inline-block;
   margin: 10px 0;
 }
 
 input[type='text'],
-input[type='number'] {
+input[type='number'],
+input[type='date'] {
   border: 1px solid #dedede;
   border-radius: 2px;
   display: block;

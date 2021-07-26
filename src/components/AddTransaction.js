@@ -6,7 +6,8 @@ import { GlobalContext } from '../context/GlobalState'
 export default function AddTransaction() {
 
     const [text, setText] = useState('');
-    const [amount, setAmount] = useState(0);
+    const [amount, setAmount] = useState('');
+    const [date, setDate] = useState('');
 
     const {addTransaction} = useContext(GlobalContext);
 
@@ -17,11 +18,13 @@ export default function AddTransaction() {
             id: uuidv4(),
             text: text,
             amount: +amount,
+            date: date
         }
 
         addTransaction(newTransaction);
         setText('');
-        setAmount(0);
+        setAmount('');
+        setDate('');
     }
 
 
@@ -39,10 +42,18 @@ export default function AddTransaction() {
 
                 <div className="form-control">
                     <label htmlFor="amount">
-                        Amount <br/>
-                        (negative - expense, positive - income)
+                        Amount
+                        {/* (negative - expense, positive - income) */}
                     </label>
                     <input type="number" value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="Enter amount..." />
+                </div>
+
+                <div className="form-control">
+                    <label htmlFor="date">
+                        Date
+                        {/* (negative - expense, positive - income) */}
+                    </label>
+                    <input type="date" value={date} onChange={(e) => setDate(e.target.value)} placeholder="Enter date..." />
                 </div>
 
                 <button className="btn">Add transaction</button>
