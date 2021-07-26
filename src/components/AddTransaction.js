@@ -45,7 +45,12 @@ export default function AddTransaction() {
                         Amount
                         {/* (negative - expense, positive - income) */}
                     </label>
-                    <input type="number" value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="Enter amount..." />
+                    <input 
+                        type="number" 
+                        value={amount} 
+                        onChange={(e) => setAmount(e.target.value)} 
+                        placeholder="Enter amount..." 
+                        inputProps={{ inputMode: 'numeric' }}/>
                 </div>
 
                 <div className="form-control">
