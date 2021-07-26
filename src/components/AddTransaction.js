@@ -54,7 +54,7 @@ export default function AddTransaction() {
                         {/* (negative - expense, positive - income) */}
                     </label>
                     <input 
-                        type="text" 
+                        type="date" 
                         value={date} 
                         onChange={(e) => setDate(e.target.value)} 
                         onFocus={(e) => (e.currentTarget.type = "date")}
