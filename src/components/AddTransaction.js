@@ -50,7 +50,7 @@ export default function AddTransaction() {
                         value={amount} 
                         onChange={(e) => setAmount(e.target.value)} 
                         placeholder="Enter amount..." 
-                        inputProps={{ inputMode: 'numeric' }}/>
+                        inputMode="numeric" />
                 </div>
 
                 <div className="form-control">
