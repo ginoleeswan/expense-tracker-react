@@ -53,7 +53,13 @@ export default function AddTransaction() {
                         Date
                         {/* (negative - expense, positive - income) */}
                     </label>
-                    <input type="date" value={date} onChange={(e) => setDate(e.target.value)} placeholder="Enter date..." />
+                    <input 
+                        type="date" 
+                        value={date} 
+                        onChange={(e) => setDate(e.target.value)} 
+                        onFocus={(e) => (e.currentTarget.type = "date")}
+                        onBlur={(e) => {e.currentTarget.type = "text"; e.currentTarget.focus();}} 
+                        placeholder="Enter date..." />
                 </div>
 
                 <button className="btn">Add transaction</button>
