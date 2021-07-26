@@ -1,4 +1,4 @@
-import React, { createContext, useReducer } from 'react';
+import React, { createContext, useReducer, useEffect } from 'react';
 import AppReducer from './AppReducer'
 
 //initial state
@@ -18,7 +18,24 @@ export const GlobalContext = createContext(initialState);
 
 //provier component
 export const GlobalProvider = ({ children }) => {
-    const[state, dispatch] = useReducer(AppReducer, initialState);
+
+    const STORAGE_KEY = 'MY_DATA'
+
+    // const[state, dispatch] = useReducer(AppReducer, initialState);
+
+    // load data initially
+    const [state, dispatch] = useReducer(AppReducer, initialState, (state) => {
+        const persistedData = localStorage.getItem(STORAGE_KEY)
+        const items = persistedData ? JSON.parse(persistedData) : []
+        return { ...state, items }
+    })
+
+
+
+     // save data on every change
+     useEffect(() => {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(state.items))
+    }, [state.items])
 
     //actions
 
