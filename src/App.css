@@ -109,6 +109,8 @@ h4 {
   line-height: 20px;
   padding: 2px 5px;
   position: absolute;
+  display: inline-flex;
+  align-items: center;
   top: 50%;
   left: 0;
   transform: translate(-100%, -50%);
