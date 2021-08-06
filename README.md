@@ -51,10 +51,10 @@ From your command line, first clone this repo:
 
 ```sh
 # Clone this repository
-$ git clone https://github.com/ginoleeswan/weather-app-basic/
+$ git clone https://github.com/ginoleeswan/expense-tracker-react/
 
 # Go into the repository
-$ cd weather-app-basic
+$ cd expense-tracker-react
 
 # Remove current origin repository
 $ git remote remove origin
